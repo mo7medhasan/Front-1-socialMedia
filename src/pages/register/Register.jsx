@@ -11,7 +11,7 @@ export default function Register() {
   const API = process.env.API||"https://api-socialmedia.herokuapp.com/api";
   const handleClick = async (e) => {
     e.preventDefault();
-   if(passwordAgain.current.value !== password.current.value)
+   if( passwordAgain.current.value !== password.current.value )
    {
      password.current.setCustomValidity("Passwords don't match! ")
    }else{
