@@ -8,7 +8,7 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
-  const API = process.env.API||"https://git.heroku.com/api-socialmedia.git/api";
+  const API = process.env.API||"https://api-socialmedia.herokuapp.com/api";
   const handleClick = async (e) => {
     e.preventDefault();
    if(passwordAgain.current.value != password.current.value)
