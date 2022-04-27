@@ -8,7 +8,7 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
-
+  const API = process.env.API;
   const handleClick = async (e) => {
     e.preventDefault();
    if(passwordAgain.current.value !== password.current.value)
@@ -22,7 +22,7 @@ export default function Register() {
 
      }
      try {
-       await axios.post("/auth/register", user);
+       await axios.post(API+"/auth/register", user);
        navigate('/login');
      } catch (err) {
        console.log(err)
