@@ -8,11 +8,11 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
-  const API = process.env.APIS_SOCIAL||"https://api-socialmedia.herokuapp.com/api";
+  const API = process.env.APIS_SOCIAL;
   const handleClick = async (e) => {
     e.preventDefault();
    if( passwordAgain.current.value !== password.current.value )
-   {
+   {console.log(passwordAgain.current.value,"__\n__",password.current.value )
      password.current.setCustomValidity("Passwords don't match! ")
    }else{
      const user ={
