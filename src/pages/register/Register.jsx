@@ -21,13 +21,9 @@ export default function Register() {
       password :password.current.value,
 
      }
-     console.log('====================================');
-     console.log(API);
-     console.log('====================================');
+
      try {
-       console.log('====================================');
-       console.log(API);
-       console.log('====================================');
+      
        await axios.post(API+"/auth/register", user);
 
        navigate('/login');

@@ -25,9 +25,6 @@ function App() {
       <Router>
 
     <Routes>
-          <Route exact path="/" element=
-          {user? <Home /> : <Register/>}
-        />
           
           <Route exact  path="/login" element= {user? <Navigate   to="/" />:<Login />} />
           
@@ -36,6 +33,9 @@ function App() {
           
           <Route path="/profile/:username" element={<Profile />} />
             
+          <Route exact path="/" element=
+          {user? <Home /> : <Register/>}
+        />
          
         </Routes>
       
