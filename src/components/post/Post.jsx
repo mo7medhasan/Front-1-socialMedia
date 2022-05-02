@@ -61,7 +61,7 @@ const likeHandler =async()=>{
         </div>
         <div className="postCenter">
           <span className="postText">
-        (post?.desc)
+        {post?.desc}
 
           </span>
           <img src={PF+post.img} alt="" className="postImg" />
