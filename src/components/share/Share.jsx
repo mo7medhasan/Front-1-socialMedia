@@ -3,6 +3,7 @@ import "./share.css";
 import { PermMedia, Label, Room, EmojiEmotions, Cancel } from "@mui/icons-material";
 import { AuthContext } from './../../context/AuthContext';
 import axios  from 'axios';
+import instance from '../../Axios'
 export default function Share() {
   const {user} = useContext(AuthContext);
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
@@ -24,13 +25,13 @@ export default function Share() {
 
       newPost.img=fileName ;
       try {
-        await axios.post(API+"/upload",data)
+        await instance.post("/upload",data)
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      await axios.post(API+"/posts",newPost);
+      await instance.post("/posts",newPost);
       window.location.reload(); 
     } catch (err) {
       console.log(err);

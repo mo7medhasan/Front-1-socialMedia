@@ -10,8 +10,8 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <Link to="/" style={{textDecoration:"none"}}>
-          {" "}
+        <Link to="/" style={{textDecoration:"none",cursor:"pointer"}}>
+          
           <span className="logo">Mo7medSocial Odain </span>
         </Link>
       </div>

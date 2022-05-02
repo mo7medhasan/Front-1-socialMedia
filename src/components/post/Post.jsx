@@ -6,7 +6,7 @@ import axios from "axios"
 import {format} from "timeago.js"
 import { Link } from 'react-router-dom';
 import { AuthContext } from './../../context/AuthContext';
- 
+import instance from '../../Axios'
 export default function Post({post}) {
  const API =process.env.REACT_APP_APIS_SOCIAL;
   
@@ -22,7 +22,7 @@ useEffect(()=>{
 
 useEffect(() => {
   const fetchUser= async()=>{
-    const res=await axios.get(`${API}/users/${post.userId}`);
+    const res=await instance.get(`/users/${post.userId}`);
     setUser(res.data);
   
   }
@@ -32,7 +32,7 @@ useEffect(() => {
 
 const likeHandler =async()=>{
   try {
-   await axios.put(`${API}/posts/${post._id}/like`,{userId:currentUser._id})
+   await instance.put(`/posts/${post._id}/like`,{userId:currentUser._id})
   } catch (err) {
     
   }
