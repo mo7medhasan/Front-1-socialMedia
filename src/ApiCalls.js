@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const API =process.env.REACT_APP_APIS_SOCIAL
+const API =process.env.REACT_APP_APIS_SOCIAL;
 export const loginCall = async (userCredential, dispatch) => {
   dispatch({ type: "LOGIN_START" });
   try {

@@ -8,13 +8,15 @@ import axios from "axios";
 import { useParams } from "react-router";
 
 export default function Profile() {
+ const API =process.env.REACT_APP_APIS_SOCIAL;
+
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [user, setUser] = useState({});
   const userName = useParams().userName;
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userName=${userName}`);
+      const res = await axios.get(`${API}/users?userName=${userName}`);
       setUser(res.data);
     };
     fetchUser();

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './../../context/AuthContext';
  
 export default function Post({post}) {
+ const API =process.env.REACT_APP_APIS_SOCIAL;
   
 const [like,setLike]=useState(post.likes.length)
 const [isLiked,setIsLiked]=useState(false);
@@ -21,7 +22,7 @@ useEffect(()=>{
 
 useEffect(() => {
   const fetchUser= async()=>{
-    const res=await axios.get(`users/${post.userId}`);
+    const res=await axios.get(`${API}/users/${post.userId}`);
     setUser(res.data);
   
   }
@@ -31,7 +32,7 @@ useEffect(() => {
 
 const likeHandler =async()=>{
   try {
-   await axios.put(`/posts/${post._id}/like`,{userId:currentUser._id})
+   await axios.put(`${API}/posts/${post._id}/like`,{userId:currentUser._id})
   } catch (err) {
     
   }
