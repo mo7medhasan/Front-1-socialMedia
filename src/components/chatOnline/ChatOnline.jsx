@@ -1,5 +1,5 @@
+import React,{ useState, useEffect } from "react";
 import "./chatOnline.css";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {

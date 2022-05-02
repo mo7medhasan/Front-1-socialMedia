@@ -1,9 +1,9 @@
-import Topbar from "../../components/topbar/Topbar";
+import React,{ useContext, useState, useEffect, useRef } from "react";
 import "./messenger.css";
+import Topbar from "../../components/topbar/Topbar";
 import Conversation from "./../../components/conversations/Conversation";
 import Message from "./../../components/messages/Message";
 import ChatOnline from "../../components/chatOnline/ChatOnline";
-import { useContext, useState, useEffect, useRef } from "react";
 import { AuthContext } from "./../../context/AuthContext";
 import axios from "axios";
 import { io } from "socket.io-client";
@@ -91,9 +91,9 @@ export default function Messenger() {
     }
   };
 
-  useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  useEffect(() => 
+ { return  scrollRef.current?.scrollIntoView({ behavior: "smooth" });}
+  , [messages]);
 
   return (
     <>

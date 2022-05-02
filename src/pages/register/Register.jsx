@@ -1,5 +1,5 @@
+import React,{ useRef } from 'react';
 import "./register.css";
-import { useRef } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 export default function Register() {
@@ -8,7 +8,7 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
-  const API = process.env.APIS_SOCIAL;
+  const API = process.env.REACT_APP_APIS_SOCIAL;
   const handleClick = async (e) => {
     e.preventDefault();
    if( passwordAgain.current.value !== password.current.value )

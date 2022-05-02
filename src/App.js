@@ -1,20 +1,17 @@
+import React , { useContext } from 'react';
 
 import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import Register from './pages/register/Register';
 import Messenger from './pages/messenger/Messenger';
-
-
-import { render } from "react-dom";
-import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  Navigate  ,  useParams
+ 
+  Navigate  ,  
 } from "react-router-dom";
 
 

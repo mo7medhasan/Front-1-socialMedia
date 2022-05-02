@@ -1,9 +1,9 @@
+import React,{ useEffect, useState, useContext } from 'react';
 import "./feed.css";
 import Share from "./../share/Share";
 import Post from "../post/Post";
 
 // import {Posts} from "../../dummyData";
-import { useEffect, useState, useContext } from 'react';
 
 import axios from "axios"
 import { AuthContext } from './../../context/AuthContext';

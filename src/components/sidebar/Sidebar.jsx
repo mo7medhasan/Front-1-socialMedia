@@ -1,3 +1,4 @@
+import  React  from 'react';
 import "./sidebar.css";
 import { RssFeed,Chat,SlowMotionVideo,Group,Bookmarks,HelpOutline,WorkOutlineOutlined
 ,EventOutlined,School} from "@mui/icons-material";

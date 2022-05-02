@@ -1,5 +1,5 @@
+import React,{useState,useEffect, useContext} from "react"
 import "./post.css";
-import {useState,useEffect, useContext} from "react"
 import {MoreVert} from '@mui/icons-material'
 import axios from "axios"
 // import {Users} from "../../dummyData"
@@ -61,7 +61,7 @@ const likeHandler =async()=>{
         </div>
         <div className="postCenter">
           <span className="postText">
-        {post?.desc}
+        (post?.desc)
 
           </span>
           <img src={PF+post.img} alt="" className="postImg" />
