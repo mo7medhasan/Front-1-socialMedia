@@ -12,7 +12,7 @@ export default function Topbar() {
       <div className="topbarLeft">
         <Link to="/" style={{textDecoration:"none",cursor:"pointer"}}>
           
-          <span className="logo">Mo7medSocial Odain </span>
+          <span className="logo"> Odain </span>
         </Link>
       </div>
       <div className="topbarCenter">

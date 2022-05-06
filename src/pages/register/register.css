@@ -2,6 +2,9 @@
     width: 100vw;
 height: 100vh;
 background-color: #f0f2f5;
+
+    padding:50px 0 50px ;
+
 display: flex;align-items: center;justify-content: center;
 }
 
@@ -71,6 +74,26 @@ font-weight: 500;
 cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    .login{
+        height: 100%;
+        padding: 0;
+    }
+    .loginWrapper{
+        flex-direction: column;
+        padding: 0 0 50px;
 
+      height: 85%;
+      width: 85%;
 
+    }
+    .loginLeft,.loginRight{
+        flex:12;
+        min-width: 100%!important;
+        min-height: 40vh!important;
+    }
 
+}
+@media screen and (max-width: 600px) {
+    
+}
