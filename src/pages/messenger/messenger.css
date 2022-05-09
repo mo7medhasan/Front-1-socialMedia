@@ -67,3 +67,13 @@ box-shadow: 0 0 15px  rgb(0, 32, 32);
   color: rgb(227, 223, 223);
   cursor: default;
 }
+@media screen and (max-width: 900px) {
+  .chatMenu,.chatOnline,.chatBox {
+    flex: 12;
+    min-width: 100%;
+  }
+  .messenger{
+    display: flex;
+    flex-direction: column;
+  }
+}
